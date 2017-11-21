@@ -1,0 +1,13 @@
+****For Line Question****
+1. The Array data structure allows for easy insertion by using Ruby method called push. We can remove elements using delete. Each element can be accessed, edited, updated and deleted with its index number or value.
+
+2. We are also able to search the array with a given value using the Ruby includes? method. 
+
+3. With arrays we can store all kinds of information like names of cars, number of months in a year. 
+
+****For Screen Question***
+1. With a screen which can be of variable sizes, an array matrix makes the best sense. Each pixel can be in any row, column which would represent the x and y axis of a graph. 
+
+2. To search the array matrix, we need to have the row and column values. Given those values we can see easily find the values. 
+
+3. Matrices can be used for other appications such as 3d models. 

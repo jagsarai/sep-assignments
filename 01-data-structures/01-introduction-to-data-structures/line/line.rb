@@ -9,21 +9,32 @@ class Line
   end
 
   def join(person)
+    self.members.push(person)
   end
 
   def leave(person)
+    self.members.delete(person)
   end
 
   def front
+    self.members[0];
   end
 
   def middle
+    mid_point = (members.length/2).floor
+    self.members[mid_point]
   end
 
   def back
+    self.members[members.length - 1]
   end
 
   def search(person)
+    if self.members.include?(person)
+      person 
+    else
+      nil
+    end
   end
 
   private
