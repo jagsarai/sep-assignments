@@ -80,4 +80,16 @@ class LinkedList
     current = self.head
     current.next != nil ? self.head = current.next : self.head = nil
   end
+
+  # For benchmark testing for accessing the nth element in list
+  def find_node(n)
+   current = self.head
+
+   for i in 0..n 
+    if(current.next)
+      current = current.next
+    end
+  end
+  current
+  end
 end

@@ -1,0 +1,19 @@
+PART 1
+
+Spatial Locality is when the computer stores data in memory spaces that are close to one another but are not in linear order. For example, when we create a linked list, the nodes are stored in various memorary addresses that are close but not next to one another. Arrays on the other hand have to be stored linearly in memory, therefore searching the array will not take much time. A linked list will take longer to search since they are at different locations. However, when we have large sets of arrays, the memory manager has to keep it all in one place, meaning, it must constantly manage memory in order to keep the array. Therefore, programs will respond slowly and at times completely stop. 
+
+PART 2
+
+---> Adding 10,000 items <---
+The array took alot less time setting up, whereas the linked list took a really really long time. For the array, I got a real world time of 0.002251 seconds. The linked list was a whoping 4.912815 seconds 
+
+---> Access 5000th item <---
+The array again was alot faster at 0.000002 seconds in accessing the element because arrays are stored in linear arragement. The linked list was obviously and predictably slower at 0.000438 seconds 
+
+---> Remove 5000th item <---
+The array took minimal time in removal at 0.000011 seconds and linked list took 0.000232 seconds. The linked list has to go through each node from the head node till we get to the nth node because locations of each node are stored dynamically. 
+
+
+
+
+
