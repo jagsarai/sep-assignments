@@ -21,7 +21,6 @@ class HashClass
       end
 
       #array size will double until collision is resloved
-      item = @items[index(key, @items.size)]
       until item == nil 
         self.resize 
         item = @items[index(key, @items.size)]
@@ -32,20 +31,14 @@ class HashClass
 
 
   def [](key)
-    if @items[index(key, @items.size)] != nil
-      @items[index(key, @items.size)].value
-    end
+    @items[index(key, @items.size)] != nil ? @items[index(key, @items.size)].value : nil
   end
 
   def resize 
     temp = @items 
     @items = Array.new(self.size * 2)
     temp.each_with_index do |obj, key|
-      if obj != nil
-        @items[index(obj.key, @items.size)] = obj
-      else
-        @items[key] = obj
-      end
+      obj != nil ? @items[index(obj.key, @items.size)] = obj : @items[key] = obj
     end 
   end
 
@@ -57,8 +50,6 @@ class HashClass
     key.each_byte do |letter| 
       index += letter
     end
-    index
-    size
     index % size
   end
 
