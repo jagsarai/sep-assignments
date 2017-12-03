@@ -7,9 +7,7 @@ class OpenAddressing
 
   def []=(key, value)
     item = @items[index(key, @items.size)]
-    if item.class != NilClass and item.value == value
-      value
-    elsif item == nil
+    if item == nil
      @items[index(key, @items.size)] =  Node.new(key, value)
     else
       index = next_open_index(index(key, @items.size))
