@@ -19,6 +19,7 @@ class SeparateChaining
     else
      @items[index(key, @items.size)].add_to_front(Node.new(key, value))
     end
+    print(key)
   end
 
   def [](key)
@@ -87,5 +88,21 @@ class SeparateChaining
     temp.each_with_index do |obj, key|
       obj == nil ? @items[key] = obj : @items[index(obj.head.key, @items.size)] = obj
     end 
+  end
+
+  #Print out state of Hash
+  def print(key)
+    p 'load factor: ' + load_factor.to_s
+    p 'index: ' + index(key, @items.size).to_s
+    if @items[index(key, @items.size)].head.next
+      current = @items[index(key, @items.size)].head
+      p 'value is ' + current.value.to_s
+      until current.next == nil 
+        p 'value is ' + current.next.value.to_s
+        current = current.next
+      end
+    else
+      p 'value is ' + @items[index(key, @items.size)].head.value.to_s
+    end
   end
 end
