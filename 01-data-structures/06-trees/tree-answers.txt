@@ -1,0 +1,9 @@
+1. The binary tree does not store the minimum values at the root node. In addition, the heap structrue reajusts itself when a value is stored into an array thus always storing the minimum values at the top levels and bigger values at the bottom levels.
+
+2. In avearage cases both binary tree is faster than a min heap at searching because with the heap we will have to search each element one at a time. Wheras, after initially comparing it to the root node, we are left we half of the tree to search. 
+
+3. Min heap will be faster at deletion, since we already have the minimum node always at the root node. Also there are no links to the childern so we can perform deletion at big O(1).
+
+4. We would use binary search trees when we are working with heirarchally data. 
+
+5. We would use heaps when we want to insure that our tree levels are in order from min to max or max to min. 

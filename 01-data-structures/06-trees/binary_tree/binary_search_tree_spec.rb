@@ -4,7 +4,6 @@ require_relative 'binary_search_tree'
 
 RSpec.describe BinarySearchTree, type: Class do
   let (:root) { Node.new("The Matrix", 87) }
-
   let (:tree) { BinarySearchTree.new(root) }
   let (:pacific_rim) { Node.new("Pacific Rim", 72) }
   let (:braveheart) { Node.new("Braveheart", 78) }
@@ -139,6 +138,17 @@ RSpec.describe BinarySearchTree, type: Class do
       tree.insert(root, mad_max_2)
       tree.delete(root, mad_max_2.title)
       expect(tree.find(root, mad_max_2.title)).to be_nil
+    end
+ 
+    it "properly deletes a 2 child nodes" do
+      tree.insert(root, braveheart)
+      tree.insert(root, pacific_rim)
+      tree.insert(root, donnie)
+      tree.insert(root, hope)
+      tree.insert(root, empire)
+      tree.insert(root, district)
+      tree.delete(root, empire.title)
+      expect(tree.find(root, empire.title)).to be_nil
     end
   end
 
